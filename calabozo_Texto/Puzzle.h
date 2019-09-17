@@ -1,6 +1,9 @@
 #pragma once
 #include <string>
 #include <vector>
+#include <fstream>
+#include <iostream>
+
 class Puzzle
 {
 private:
@@ -10,6 +13,8 @@ private:
 
 public:
 	Puzzle();
+	Puzzle(std::string fileName);
 	virtual ~Puzzle();
+	std::string getAsString();
 };
 

@@ -19,6 +19,8 @@ Game::~Game()
 
 void Game::initGame() {
 	createNewCharacter();
+	Puzzle p("lel.txt");
+	std::cout << p.getAsString() << "\n";
 }
 
 void Game::mainMenu()
@@ -101,5 +103,5 @@ void Game::travel()
 
 	Event ev;
 
-	ev.generateEvent();
+	ev.generateEvent(this->characters[activeCharacter]);
 }

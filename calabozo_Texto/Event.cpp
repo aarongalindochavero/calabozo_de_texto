@@ -18,6 +18,7 @@ void Event::generateEvent(Character &character)
 	switch (i)
 	{
 	case 0:
+		enemyEncounter(character);
 		break;
 	case 1:
 		break;
@@ -34,4 +35,5 @@ void Event::enemyEncounter(Character & character)
 
 void Event::puzzleEncounter(Character & character)
 {
+
 }
