@@ -1,27 +1,95 @@
+//#pragma once
+//#include<stdlib.h>
+//#include <string>
+//
+//class Enemy
+//{
+//private:
+//	int level;
+//	int hp;
+//	int hpMax;
+//	int damageMin;
+//	float damageMax;
+//	float dropChance;
+//	int defense;
+//	int accuracy;
+//public:
+//	Enemy();
+//	Enemy(int level = 0);
+//	virtual ~Enemy();
+//
+//	inline bool isAlive() { return this->hp > 0; }
+//	std::string getAsString()const;
+//	inline void takeDamage(int damage) { this->hp -= damage; }
+//	inline int getDamage()const { return rand() % (int)this->damageMax - this->damageMin; }
+//	inline int getExp()const { return this->level * 100; }
+//};
+//
+
 #pragma once
-#include<stdlib.h>
-#include <string>
+
+
+
+#include"STLINCLUDE.h"
+
+
 
 class Enemy
+
 {
+
 private:
+
 	int level;
+
 	int hp;
+
 	int hpMax;
+
 	int damageMin;
-	float damageMax;
+
+	int damageMax;
+
 	float dropChance;
-	int defense;
+
+	int defence;
+
 	int accuracy;
+
+
+
 public:
-	Enemy();
+
 	Enemy(int level = 0);
+
 	virtual ~Enemy();
 
-	inline bool isAlive() { return this->hp > 0; }
-	std::string getAsString()const;
-	inline void takeDamage(int damage) { this->hp -= damage; }
-	inline int getDamage()const { return rand() % (int)this->damageMax - this->damageMin; }
-	inline int getExp()const { return this->level * 100; }
-};
 
+
+	inline bool isAlive() { return this->hp > 0; }
+
+	std::string getAsString()const;
+
+	void takeDamage(int damage);
+
+
+
+	inline int getLevel()const { return this->level; }
+
+	inline int getDamageMin()const { return this->damageMin; }
+
+	inline int getDamageMax()const { return this->damageMax; }
+
+	inline int getDamage()const { return rand() % this->damageMax + this->damageMin; }
+
+	inline int getExp()const { return this->level * 100; }
+
+	inline int getHp()const { return this->hp; }
+
+	inline int getHpMax()const { return this->hpMax; }
+
+	inline int getDefence()const { return this->defence; }
+
+	inline int getAccuracy()const { return this->accuracy; }
+
+};

@@ -1,20 +1,37 @@
 #pragma once
 #include <string>
-#include <vector>
-#include <fstream>
-#include <iostream>
+#pragma once
+
+
+
+#include"STLINCLUDE.h"
+
+
 
 class Puzzle
+
 {
+
 private:
+
 	std::string question;
+
 	std::vector<std::string> answers;
+
 	int correctAnswer;
 
-public:
-	Puzzle();
-	Puzzle(std::string fileName);
-	virtual ~Puzzle();
-	std::string getAsString();
-};
 
+
+public:
+
+	Puzzle(std::string fileName);
+
+	virtual ~Puzzle();
+
+	std::string getAsString();
+
+
+
+	inline const int& getCorrectAns()const { return this->correctAnswer; }
+
+};
